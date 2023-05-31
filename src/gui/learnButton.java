@@ -39,8 +39,9 @@ public class learnButton {
             button.setForeground(Color.pink);
 //            button.setBorder(BorderFactory.createEtchedBorder());
 
-            //可以设置按钮的状态（是否可用）
+            //可以设置按钮的状态（是否可用、是否可获得焦点）
             button.setEnabled(true);
+            button.setFocusable(true);
 
             //在点击按钮后显示的标签（需要先设置为不可见）
             label = new JLabel("这是一个标签，会在点击按钮后显示");
