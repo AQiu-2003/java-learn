@@ -2,8 +2,8 @@ package gui.components;
 
 import javax.swing.*;
 
-public class myFrame extends JFrame {
-    public myFrame() {
+public class MyFrame extends JFrame {
+    public MyFrame() {
         this.setTitle("AQiu's Frame");
         this.setSize(500, 500);
         this.setLocation(200, 200);

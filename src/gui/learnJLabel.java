@@ -1,6 +1,6 @@
 package gui;
 
-import gui.components.myFrame;
+import gui.components.MyFrame;
 
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -48,14 +48,22 @@ public class learnJLabel {
 
         //设置bounds，即标签的位置和大小
         label.setBounds(100, 100, 500, 500);    //如果删除了默认布局，则必须要设置bounds
+        label.setSize(500,500);   //也可以分开来设置
+        label.setLocation(100, 100);
+
+
+        JLabel longLabel = new JLabel("😈我是一个文字相当长的label呜呜呜");
+        longLabel.setBounds(0, 0, 100, 100);
+        longLabel.setToolTipText("这是一个ToolTip");
 
         //继承了JFrame类
-        myFrame frame = new myFrame();
+        MyFrame frame = new MyFrame();
         //将默认布局删除（默认布局为BorderLayout，若设为null则必须要为label设置bounds（否则不显示））
         frame.setLayout(null);
         //将label添加到frame中
         frame.add(label);
-        //可设置窗口大小自适应
+        frame.add(longLabel);
+        //可设置窗口大小自适应（在添加了所有内容之后）
 //        frame.pack();
         frame.setVisible(true);
     }

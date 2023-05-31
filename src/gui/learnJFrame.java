@@ -4,6 +4,9 @@ import javax.swing.JFrame;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 
+/**
+ * JFrame是用于创建和管理图形用户界面中的顶级窗口
+ */
 public class learnJFrame {
     public static void main(String[] args) {
         JFrame frame = new JFrame();
