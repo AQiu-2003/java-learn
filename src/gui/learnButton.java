@@ -25,6 +25,12 @@ public class learnButton {
             button.addActionListener(this);
             //也可以使用lambda表达式
             button.addActionListener((e -> System.out.println("你点了我1")));
+            //或者使用匿名内部类
+            button.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    System.out.println("你点了我3");
+                }
+            });
 
             //设置按钮的图标
             ImageIcon icon = new ImageIcon("src/gui/iOS_Club_LOGO.png");
@@ -57,6 +63,7 @@ public class learnButton {
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             setLocationRelativeTo(null);
         }
+
         @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == button) {
